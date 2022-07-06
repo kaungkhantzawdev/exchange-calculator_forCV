@@ -1,0 +1,36 @@
+:root{
+    --night-primary : #171717;
+    --night-secondary : #383838;
+    --night-text : #8b8b8b;
+
+}
+*{
+    color: var(--night-text);
+
+}
+
+.night-mode{
+    background-color: var(--night-primary);
+    transition: 0.5s;
+
+}
+
+.night-mode input, .night-mode select{
+    background-color: var(--night-secondary);
+    border: 1px solid var(--night-secondary) !important;
+}
+
+.night-mode table tr td{
+    background-color: var(--night-secondary);
+}
+.night-mode .nightChange button{
+    background: var(--light);
+    transition: 0.5s;
+
+}
+.night-mode .nightChange button i{
+    font-size: 16px;
+    color: var(--secondary);
+    transition: 0.5s;
+
+}

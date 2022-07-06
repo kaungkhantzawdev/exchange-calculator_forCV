@@ -1,0 +1,282 @@
+@font-face {
+    font-family: "Oswald";
+    font-weight: normal;
+    src: url("../vendor/fonts/Oswald-Regular.ttf");
+}
+@font-face {
+    font-family: "Oswald";
+    font-weight: bold;
+    src: url("../vendor/fonts/Oswald-Medium.ttf");
+}
+@font-face {
+    font-family: "mm";
+    src: url("../vendor/fonts/MyanmarSagar.ttf");
+}
+:root{
+    --primary : #2CD1EE;
+    --primary-soft: rgba(44, 209, 238, 0.89);
+    --secondary : #707070;
+    --secondary-soft: #f2f2f2;
+    --light : #ffffff;
+    --light-soft: #fafafa;
+    --danger : #ff0000;
+    --danger-soft : #cb0000;
+    --dark : #3a3b3c;
+    --br:5px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Oswald","mm", 'sans-serif';
+    color: var(--secondary);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    transition: 0.5s;
+}
+
+/*divider*/
+.divider{
+    height: 4px;
+    border-radius: var(--br);
+    background-color: var(--secondary);
+}
+
+/*main */
+
+.app{
+    width: 650px;
+    margin: 100px auto;
+}
+
+/*upper-box*/
+
+.upper-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand{
+    display: flex;
+    align-items: center;
+}
+.brand-img{
+    width: 50px;
+}
+.brand-title{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.result_box{}
+.result{
+    font-size: 50px;
+    /*font-weight: 600;*/
+}
+
+/*mid-box*/
+.mid-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.mid-box label{
+    display: block !important;
+    margin-bottom: 5px;
+}
+.input-box, .from-box,.to-box, .btn-box{
+    width: 100%;
+}
+.mid-box input{
+    text-align: right;
+}
+.mid-box input, select{
+    width: 90%;
+    padding: 5px 10px !important;
+    border-radius: var(--br);
+    border: 1px solid var(--secondary) !important;
+    outline: none;
+}
+.btn-box button{
+    width: 100%;
+    height: 64px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: var(--br);
+    border: none;
+    background-color: var(--primary);
+    color: var(--light);
+}
+.btn-box button:active{
+    background-color: var(--primary-soft);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+select::-ms-expand {	display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+     select { width: 110%;
+         background-position: right 30px center !important;
+         border: none !important;}
+}
+
+/*history box*/
+/*.history-box{*/
+/*    overflow-y: scroll;*/
+/*}*/
+.history-table{
+    width: 100%;
+}
+.history-table th{
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 10px;
+    border-radius: var(--br);
+}
+.history-table td{
+    padding: 10px;
+    border-radius: var(--br);
+}
+.history-table tr{
+    background-color: var(--light-soft);
+}
+.history-table tr:nth-child(even){
+    background-color: var(--secondary-soft);
+    padding: 10px;
+    border-radius: var(--br);
+}
+.history-table th, td{
+    text-align: left;
+}
+.history-table th:last-child{
+    text-align: right;
+}
+.history-table td:last-child{
+    text-align: right;
+}
+.history-table tr:hover{
+    background-color: var(--secondary-soft);
+}
+#rowSpacer td{
+    text-align: center;
+}
+
+
+.clearBtn{
+    width: 100%;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: var(--danger);
+    color: var(--light);
+    cursor: pointer;
+    border-radius: var(--br);
+    text-transform: lowercase;
+}
+
+.clearBtn:active{
+    background-color: var(--danger-soft);
+
+}
+
+/* width */
+/*::-webkit-scrollbar {*/
+/*    width: 10px;*/
+/*}*/
+
+/* Track */
+/*::-webkit-scrollbar-track {*/
+/*    background: var(--primary);*/
+
+/*}*/
+
+/* Handle */
+/*::-webkit-scrollbar-thumb {*/
+/*    background: var(--primary);*/
+/*}*/
+
+/* Handle on hover */
+/*::-webkit-scrollbar-thumb:hover {*/
+/*    background: var(--primary);*/
+
+/*}*/
+
+.nightChange button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom:50px;
+    right: 50px;
+    background: var(--secondary);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+
+}
+.nightChange button i{
+    font-size: 16px;
+    color: var(--light);
+    transition: 0.5s;
+
+}
+
+#rowSpacer{
+    border-radius: var(--br);
+}
+
+
+@media screen and (max-width: 580px){
+
+    .app{
+        width: 100%;
+        margin: 10px auto;
+        padding: 0 10px;
+    }
+    .upper-box{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .brand{
+        width: 100%;
+    }
+    .mid-box{
+        flex-wrap: wrap;
+    }
+    .input-box, .from-box, .to-box{
+        margin-bottom: 10px;
+    }
+    .clearBtn{
+        margin-bottom: 10px;
+    }
+    .from-box, .to-box{
+        width: 45%;
+    }
+    .mid-box input, select{
+        width: 100%;
+    }
+    .history-box{
+        overflow-y: scroll;
+    }
+}
